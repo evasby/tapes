@@ -1,0 +1,94 @@
+$filter-position-step: 180px;
+$filter-list: 1, 2, 3, 4;
+$filter-border-color: #d4d4d4;
+$filter-content-color: #4d4d4d;
+$filter-title-color: #ed272b;
+$filter-title-size: 13px;
+$filter-content-size: 13px;
+.filter{
+  position: relative;
+  height: 80px;
+  &_item{
+    position: absolute;
+    top: 0px;
+    width: 162px;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid $filter-border-color;
+    @each $item in $filter-list {
+      $k: index($filter-list, $item) - 1;
+      &__#{$item} {
+        left: #{$k * $filter-position-step};
+        z-index: 5 - index($filter-list, $item);
+      }
+    }
+    padding-top: 15px;
+    &__4{
+      padding-top: 9px;
+    }
+  }
+  &_title{
+    margin: 0px;
+    height: 27px;
+    line-height: 1;
+    cursor: pointer;
+    color: $filter-title-color;
+    font-size: $filter-title-size;
+    width: 110px;
+    margin-left: 15px;
+    .filter_item__4 &{
+      height: 33px;
+    }
+  }
+  &_close{
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-image: url(../image/close.gif);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    &:hover{
+      @include def-opacity(0.8);
+    }
+  }
+  &_open{
+    background: url("../image/arr.gif") no-repeat #fff;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+  &_result{
+    margin-left: 14px;
+  }
+  &_filter{
+    color: $filter-content-color;
+    font-size: $filter-content-size;
+    margin-bottom: 5px;
+  }
+  &_content{
+    margin-left: 14px;
+    padding-bottom: 10px;
+  }
+  &_p{
+    display: block;
+    margin-bottom: 10px;
+    color: $filter-content-color;
+    font-size: $filter-content-size;
+  }
+  &_check{
+    margin-right: 10px;
+  }
+}

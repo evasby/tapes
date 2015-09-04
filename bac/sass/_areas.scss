@@ -1,0 +1,65 @@
+.areas{
+  padding: 0px 0px 0px 20px;
+  &_top{
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+    img{
+      float: left;
+    }
+  }
+  &_refer{
+    padding: 0px 0px 0px 20px;
+    float: left;
+    max-width: 570px;
+    p{
+      //padding: 10px 0px 0px 10px;
+    }
+  }
+  &_imgh{
+    margin-bottom: 15px;
+  }
+  &_list{
+    padding: 0px 0px 20px 0px;
+  }
+  &_item{
+    /*width: 50%;
+    float: left;*/
+    overflow: hidden;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #666666;
+  }
+  &_text{
+    margin-bottom: 5px;
+    height: 49px;
+    p{
+      font-size: 12px;
+    }
+  }
+  &_title{
+    display: block;
+    font-size: 18px;
+    @include def-link-colors(#666666, #ed272b, #666666, #666666, #666666);
+    padding-bottom: 10px;
+  }
+  &_head{
+    border-bottom: 1px solid #d4d4d4;
+  }
+  &_image{
+    float: left;
+  }
+  &_descr{
+    float: left;
+  }
+  &_pager{
+    padding-top: 15px;
+  }
+  &_recommend{
+    padding-top: 6px;
+    a{
+      @include def-link-colors(#ed272b, #ed272b, #ed272b, #ed272b, #ed272b);
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

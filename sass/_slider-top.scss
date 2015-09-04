@@ -1,0 +1,79 @@
+.slider-top{
+  height: 300px;
+  //background: url('../image/slider.png') no-repeat top right;
+  margin-top: 18px;
+  position: relative;
+  @include old-ie{
+    *+html & {
+      margin-top: 33px;
+    }
+  }
+  padding-top: 30px;
+  @include def-respond(tablets-mobile){
+    background-size: 20% auto;
+  }
+  @include def-respond(mobile){
+    background: none;
+  }
+  &_title{
+    margin: 0 0 0 16px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  p{
+    margin: 25px 0px 0px 0px;
+    padding: 0 0 0 45px;
+    position: relative;
+    &:before{
+      background: url("../image/marker.gif") 0px 0px no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      left: 27px;
+      top: 4px;
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="before"
+      );
+      .before{
+        background: url("../image/marker.gif") 0px 0px no-repeat #fff;
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        left: 27px;
+        top: 4px;
+      }
+    }
+    &:first-child{
+      max-width: 590px;
+    }
+    &:nth-child(2){
+      max-width: 630px;
+    }
+    &:nth-child(3){
+      max-width: 690px;
+    }
+    &:nth-child(4){
+      max-width: 700px;
+    }
+    @include old-ie{
+      &:first-child + *{
+        max-width: 630px;
+      }
+      &:first-child + * + *{
+        max-width: 690px;
+      }
+      &:first-child + * + * + *{
+        max-width: 700px;
+      }
+    }
+  }
+  @include def-respond(mobile){
+    height: auto;
+  }
+}

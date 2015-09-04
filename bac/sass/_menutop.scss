@@ -1,0 +1,107 @@
+$font_hover_color_a: #005b9a;
+.menutop{
+  clear: both;
+  float: left;
+  padding-top: 27px;
+  @include old-ie{
+    *+html & {
+      min-height: 1%;
+      width: 100%;
+    }
+  }
+  &_list{
+    float: left;
+    margin: 0px;
+    width: auto;
+    background: url("../image/topmenu-bg.jpg") repeat-x #eeeeee;
+    list-style: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    &__l2{
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 53px;
+      left: -1px;
+      z-index: 2;
+      @include def-transition(all, 0.2s, ease-in-out);
+      .menutop_item:hover & {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &_item{
+    float: left;
+    border-bottom: 3px solid #ed272b;
+    font-size: 13px;
+    position: relative;
+    &__l2{
+      float: none;
+      display: block;
+      font-size: 11px;
+    }
+    .menutop > .menutop_list > &:first-child{
+      border-bottom: 3px solid $font_hover_color_a;
+    }
+    .menutop > .menutop_list > &:first-child a{
+      border-left: 1px solid #d4d4d4;
+      width: 55px;
+      padding-left: 0px;
+      padding-right: 0px;
+      background-image: url("../image/home.png");
+      background-repeat: no-repeat;
+      background-position: 50% 46%;
+      font: 0/0 serif;
+      text-shadow: none;
+      color: transparent;
+      @include old-ie{
+        * padding-top: 17px;
+      }
+      @include def-respond(mobile){
+        width: auto;
+        background-position: 8% 46%;
+      }
+    }
+  }
+  &_link{
+    display: block;
+    height: 31px;
+    padding: 18px 18px 0px 18px;
+    border-top: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    &__l2{
+      text-align: center;
+    }
+    &:hover{
+      color: $font_hover_color_a;
+    }
+    .menutop_item__current & {
+      color: $font_hover_color_a;
+    }
+  }
+  @include def-respond(tablets-mobile){
+    max-width: 710px;
+    margin: 0 auto;
+    &_link{
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 21px;
+      font-size: 10px;
+    }
+  }
+  @include def-respond(all-mobile){
+    position: relative;
+    &_list{
+      margin-top: 15px;
+    }
+  }
+  @include def-respond(mobile){
+    position: relative;
+    &_item{
+      float: none;
+    }
+  }
+}

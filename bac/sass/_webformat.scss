@@ -1,0 +1,20 @@
+.webformat{
+  padding-top: 16px;
+  &_link{
+    display: block;
+    margin: 0 auto;
+    height: 37px;
+    width: 150px;
+    background-image: url(../image/webformat2.png);
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+  @include def-respond(tablets-mobile){
+    width: auto;
+    clear: both;
+    &_link{
+      margin: 0 auto;
+    }
+  }
+}

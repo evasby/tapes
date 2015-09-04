@@ -1,0 +1,136 @@
+$filter-border-color: #d4d4d4;
+$filter-title-color: #ed272b;
+$filter-content-color: #4d4d4d;
+$filter-content-size: 13px;
+.filt{
+  position: relative;
+  padding-bottom: 15px;
+  .form-item{
+    margin: 0px;
+  }
+  @include def-clearfix();
+  &_item{
+    float: left;
+    width: 162px;
+    background-color: #ffffff;
+    position: relative;
+    margin-right: 18px;
+    &__1{
+      z-index: 4;
+    }
+    &__2{
+      z-index: 3;
+    }
+    &__3{
+      z-index: 2;
+    }
+    &__4{
+      z-index: 1;
+      margin-right: 0px;
+      &:hover{
+        z-index: 5;
+      }
+    }
+    top: 0px;
+    @include def-transition(all, 0.3s);
+    &:hover{
+      top: -10px;
+    }
+  }
+  &_wrap{
+    width: 162px;
+    background-color: #fff;
+    border: 1px solid $filter-border-color;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    top: 0px;
+    left: 0px;
+    @include def-transition(all, 0.3s);
+    .bef-slider{
+      display: none;
+      margin: 0px 25px 0px 25px;
+    }
+    &:hover{
+      width: 215px;
+      //top: -5px;
+      left: -5px;
+      padding-bottom: 10px;
+      .bef-slider{
+        display: block;
+      }
+    }
+    .filt_item__1 &:hover{
+      left: 0px;
+    }
+    .filt_item__4 &:hover{
+      left: -52px;
+    }
+  }
+  &_title{
+    display: block;
+    margin: 0px;
+    height: 27px;
+    line-height: 1;
+    cursor: pointer;
+    color: $filter-title-color;
+    font-size: $filter-title-size;
+    width: 110px;
+    margin-left: 15px;
+  }
+  &_content{
+    margin-left: 14px;
+    padding-bottom: 10px;
+    color: $filter-content-color;
+    font-size: $filter-content-size;
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    @include def-transition(all, 0.3s);
+    .filt_wrap:hover &{
+      display: block;
+      opacity: 1;
+    }
+    .form-type-textfield{
+      float: left;
+      margin-right: 15px;
+      label{
+        display: none;
+      }
+    }
+    .form-type-textfield input{
+      width: 32px;
+    }
+  }
+  &_open{
+    background: url("../image/arr.gif") no-repeat #fff;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    .filt_wrap:hover &{
+      background: url("../image/arr2.gif") no-repeat #fff;
+      top: 17px;
+    }
+  }
+  &_result{
+    margin-left: 14px;
+    .filt_wrap:hover &{
+      display: none;
+    }
+  }
+  &_filter{
+    color: $filter-content-color;
+    font-size: $filter-content-size;
+    margin-bottom: 5px;
+  }
+  &_filter1{
+    margin-right: 13px;
+  }
+}

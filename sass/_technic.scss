@@ -1,0 +1,62 @@
+.technic{
+  border-top: 1px solid #d4d4d4;
+  &_item{
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #d4d4d4;
+    &__even{
+      background-color: #fafafa;
+    }
+    &__odd{
+      background-color: #e6e6e6;
+    }
+  }
+  &_title{
+    //float: left;
+    padding-left: 17px;
+    height: 50px;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #4d4d4d;
+  }
+  &_text{
+    //float: left;
+    height: 50px;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4d4d4d;
+  }
+  tr{
+  	border: none;
+  	&:nth-child(2n) {
+  		background-color: inherit;
+  	}
+  }
+  /*tr{
+    border-bottom: 1px solid $table-color-border;
+    &:nth-child(even){
+      background-color: #e6e6e6;
+    }
+    &:nth-child(odd){
+      background-color: #fafafa;
+    }
+  }*/
+  /*td{
+    color: #4d4d4d;
+    font-size: 14px;
+    height: 29px;
+    padding-left: 17px;
+    vertical-align: middle;
+    width: 50%;
+    &:nth-child(even){
+      font-weight: bold;
+    }
+  }*/
+}

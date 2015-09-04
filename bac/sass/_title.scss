@@ -1,0 +1,40 @@
+$title-font-color: #005b9a;
+$title-font-size: 30px;
+$title-border-color: #d4d4d4;
+$title-border-size: 2px;
+.title{
+  height: 72px;
+  border: $title-border-size solid $title-border-color;
+  margin: 15px 0px 13px 0px;
+  .search-result &{
+    border: none;
+    border-top: 1px solid $title-border-color;
+    height: auto;
+    padding-top: 15px;
+  }
+  @include def-respond(mobile){
+    height: auto;
+  }
+  &_img{
+    height: auto;
+    width: 217px;
+    float: left;
+    @include def-respond(mobile){
+      display: none;
+    }
+  }
+  &_h1{
+    color: $title-font-color;
+    font-size: $title-font-size;
+    overflow: hidden;
+    padding: 17px 0px 0px 19px;
+    @include def-respond(tablets-mobile){
+      font-size: 25px;
+    }
+    @include def-respond(mobile){
+      font-size: 25px;
+      padding: 5px 0px 5px 5px;
+    }
+  }
+  @include def-clearfix2();
+}

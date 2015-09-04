@@ -1,0 +1,73 @@
+$font_hover_color_a: #005b9a;
+.user-block{
+  padding: 15px 0 0 0;
+  position: relative;
+  width: 23%;
+  float: left;
+  &_link-login{
+    margin: 0 0 0 63px;
+    border-bottom: 1px solid #d9d9d9;
+    &:hover{
+      color: $font_hover_color_a;
+      border-bottom: 1px dashed #b6cee6;
+    }
+    &:before{
+      background: url("../image/icons-top.png") -29px -2px no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 15px;
+      position: absolute;
+      top: 13px;
+      left: 35px;
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="before"
+      );
+      .before{
+        background: url("../image/icons-top.png") -29px -2px no-repeat #fff;
+        width: 14px;
+        height: 15px;
+        position: absolute;
+        top: 13px;
+        left: 35px;
+      }
+    }
+  }
+  &_link-reg{
+    margin: 0 0 0 63px;
+    border-bottom: 1px solid #d9d9d9;
+    line-height: 2.4;
+    &:hover{
+      color: $font_hover_color_a;
+      border-bottom: 1px dashed #b6cee6;
+    }
+  }
+  @include def-respond(tablets-mobile){
+    width: 190px;
+    &_link-login{
+      margin: 0 0 0 28px;
+      &:before{
+        left: 0px;
+      }
+    }
+    &_link-reg{
+      margin: 0 0 0 28px;
+    }
+  }
+  @include def-respond(mobile){
+    clear: both;
+    width: 185px;
+    &_link-login{
+      margin: 0 0 0 28px;
+      &:before{
+        left: 0px;
+      }
+    }
+    &_link-reg{
+      margin: 0 0 0 28px;
+    }
+  }
+}

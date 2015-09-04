@@ -1,0 +1,82 @@
+$menu-font-size-title: 16px;
+$menu-bac-color: #fafafa;
+$menu-item-border-color: #ebebeb;
+$menu-item-color: #4d4d4d;
+$menu-item-font-size: 14px;
+$menu-font-color-hover-a: #005b9a;
+$filters_menu_list_sprite-step: 20px;
+$menu_list: str, tra, fle, bum, meb, oko, pos, vis, mar, upa, bit, ele;
+.menu {
+  width: 220px;
+  &_title{
+    text-transform: uppercase;
+    border-left: 5px solid $blue;
+    border-bottom: 1px solid $blue;
+    padding: 8px 0px 12px 12px;
+    margin: 0px 0px 7px 0px;
+    font-size: $menu-font-size-title;
+  }
+  &_list {
+    position: relative;
+    max-width: 220px;
+    margin: 0 auto;
+    border-left: 5px solid $blue;
+    border-right: 1px solid $menu-item-border-color;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        width: 100%;
+        height: 1px;
+    }
+    .front & {
+      height: 677px;
+    }
+    @include def-respond(tablets-mobile){
+      height: auto;
+    }
+    @include def-respond(mobile){
+      height: auto;
+    }
+  }
+  &_item {
+    display: block;
+    border-bottom: 1px dotted $menu-item-border-color;
+    position: relative;
+    background-color: $menu-bac-color;
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &_link {
+    padding: 13px 0px 12px 40px!important;
+    background-position: 8px 11px!important;
+    display: block;
+    line-height: 1;
+    font-size: $menu-item-font-size;
+    @include def-link-colors($menu-item-color, $menu-font-color-hover-a, $menu-item-color, $menu-item-color, $menu-item-color);
+    &:hover {
+      text-decoration: none;
+    }
+    //.menu_item:last-child &:before{
+    //  background: url("../image/menu-icons.png") 0px 0px no-repeat #fff;
+    //  content: "";
+    //  display: inline-block;
+    //  width: 20px;
+    //  height: 18px;
+    //  position: absolute;
+    //  left: 10px;
+    //  top: 10px;
+    //}
+    //@each $item in $menu_list {
+    //  $k: index($menu_list, $item) - 1;
+    //  &__#{$item}:before {
+    //    background-position: -#{$k * $filters_menu_list_sprite-step} 0;
+    //  }
+    //}
+  }
+}

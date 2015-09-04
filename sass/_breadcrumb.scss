@@ -1,0 +1,74 @@
+$breadcrumb-color: #9e9e9e;
+$breadcrumb-size: 13px;
+.breadcrumb{
+  clear: both;
+  padding: 15px 0px 19px 0px;
+  &_item{
+    color: $breadcrumb-color;
+    font-size: $breadcrumb-size;
+    position: relative;
+    &:before{
+      background: url("../image/arrow.jpg")no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 11px;
+      height: 8px;
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="breadcrumb_before"
+      );
+      *+html &{
+        margin-right: 15px;
+      }
+      .breadcrumb_before{
+        background: url("../image/arrow.jpg")no-repeat #fff;
+        width: 11px;
+        height: 8px;
+        position: absolute;
+        top: 4px;
+        left: -12px;
+      }
+    }
+  }
+  &_link{
+    margin-right: 5px;
+    color: $breadcrumb-color;
+    font-size: $breadcrumb-size;
+    text-decoration: underline;
+    position: relative;
+    &:before{
+      background: url("../image/arrow.jpg")no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 11px;
+      height: 8px;
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="breadcrumb_before"
+      );
+      *+html &{
+        margin-right: 15px;
+      }
+      .breadcrumb_before{
+        background: url("../image/arrow.jpg")no-repeat #fff;
+        width: 11px;
+        height: 8px;
+        position: absolute;
+        top: 4px;
+        left: -12px;
+      }
+    }
+    &:first-child:before {
+      display: none; 
+    }
+    @include old-ie{
+      &:first-child .breadcrumb_before {
+        display: none;
+      }
+    }
+  }
+}

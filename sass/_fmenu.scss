@@ -1,0 +1,45 @@
+.fmenu{
+  max-width: 660px;
+  margin: 0 auto;
+  position: relative;
+
+  @include old-ie{
+    width: 660px;
+    margin: 0 auto;
+  }
+  &_list{
+    overflow: hidden;
+  }
+  &_item{
+    float: left;
+    margin-right: 60px;
+    padding: 25px 0 25px 0;
+    height: 40px;
+    &:last-child{
+      margin-right: 0px;
+    }
+    @include old-ie{
+      &:first-child + * + * + * + *{
+        margin-right: 0px;
+      }
+    }
+  }
+  &_link{
+    /*display: block;
+    padding: 25px 0 25px 0;
+    height: 40px;*/
+  } 
+  &_title{
+    position: absolute;
+    top:-32px;
+    left:-137px;
+    border: 1px solid #cccccc;
+    background-color: #eeeeee;
+    color: #666666;
+    padding: 8px 5px 8px 5px;
+    border-top-right-radius:6px;
+    border-bottom-right-radius:0px;
+    border-bottom-left-radius:0px;
+    border-top-left-radius:6px;
+  }
+}

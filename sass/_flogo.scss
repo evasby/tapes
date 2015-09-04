@@ -1,0 +1,23 @@
+.flogo{
+  width: 35%;
+  float: left;
+  &_link{
+    display: block;
+    height: 87px;
+    width: 130px;
+    background-image: url(../image/logo-bot.png);
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+  @include def-respond(tablets-mobile){
+    width: 50%;
+    &_link{
+      margin: 0 auto;
+    }
+  }
+  @include def-respond(mobile){
+    float: none;
+    clear: both;
+  }
+}

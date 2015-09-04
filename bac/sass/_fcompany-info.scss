@@ -1,0 +1,16 @@
+.fcompany-info{
+  width: 51%;
+  float: left;
+  &_p{
+    margin: 0px;
+    max-width: 320px;
+    padding-top: 8px;
+  }
+  @include def-respond(tablets-mobile){
+    width: 50%;
+  }
+  @include def-respond(mobile){
+    float: none;
+    clear: both;
+  }
+}

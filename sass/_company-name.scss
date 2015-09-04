@@ -1,0 +1,27 @@
+$company-name-color-h1: #005b9a;
+.company-name{
+  padding: 15px 0 0 0;
+  width: 38%;
+  float: left;
+  &_title{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: $grey;
+  }
+  &_descr{
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.1;
+    color: $company-name-color-h1;
+    max-width: 220px;
+  }
+  @include def-respond(tablets-mobile){width: 50%;}
+  @include def-respond(mobile){
+    clear: both;
+    width: auto;
+  }
+}

@@ -1,0 +1,54 @@
+$converting-color-title: #ed272b;
+$converting-size-title: 24px;
+$converting-color-content: #616161;
+$converting-size-content: 14px;
+.converting{
+  padding-left: 20px;
+  @include old-ie{
+    *+html & {
+      padding: 0px 0px 0px 240px;
+    }
+  }
+  &_image{
+    width: 220px;
+    //height: 175px;
+    float: left;
+    @include def-box-shadow(0px, 0px, 3px, #ccc);
+    border: 3px solid #ffffff;
+    @include def-respond(all-mobile){
+      float: none;
+    }
+  }
+  &_img{
+    width: 100%;
+    height: auto;
+  }
+  &_content{
+    overflow: hidden;
+    padding-left: 20px;
+    @include def-respond(all-mobile){
+      padding-left: 0px;
+    }
+  }
+  &_title{
+    font-size: $converting-size-title;
+    @include def-link-colors($converting-color-title, $converting-color-title, $converting-color-title, $converting-color-title, $converting-color-title);
+    text-decoration: underline;
+  }
+  &_text{
+    margin: 10px 0px 0px 0px;
+    color: $converting-color-content;
+    font-size: $converting-size-content;
+    line-height: 1.2;
+  }
+  &_item{
+    @include def-clearfix();
+    margin-bottom: 28px;
+  }
+  .view-header{
+    padding: 0px 0px 20px 0px;
+    color: $converting-color-content;
+    font-size: $converting-size-content;
+    line-height: 1.2;
+  }
+}

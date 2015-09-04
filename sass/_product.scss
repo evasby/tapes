@@ -1,0 +1,15 @@
+.product{
+  &_title{
+    font-weight: bold;
+  }
+  &_descr{
+    padding-top: 20px;
+  }
+  &_right{
+    float: right;
+    width: 240px;
+  }
+  &_left{
+    overflow: hidden;
+  }
+}

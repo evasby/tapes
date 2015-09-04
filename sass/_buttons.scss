@@ -1,0 +1,35 @@
+$buttons_link_color: #616161;
+$buttons_link_color_hover: #ed272b;
+$buttons_link_color_size: 13px;
+$buttons_border_color: #d4d4d4;
+$buttons_border_color2: #005b9a;
+.buttons{
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 0px;
+  &_inner{
+    border: 1px solid $buttons_border_color;
+    //overflow: hidden;
+    float: left;
+    width: 278px;
+    margin: 0px 8px 9px 0px;
+  }
+  &_link{
+    display: block;
+    padding: 5px 0px 5px 21px;   
+    margin-left: 3px;
+    border-left: 4px solid $buttons_border_color2;
+    font-size: $buttons_link_color_size;
+    @include def-link-colors($buttons_link_color, $buttons_link_color_hover, $buttons_link_color_hover, $buttons_link_color, $buttons_link_color);
+    @include def-v-gradient($fromColor:#ffffff, $toColor:#ededed);
+    &__current{
+      @include def-v-gradient($fromColor:#ededed, $toColor:#ffffff);
+      border-left: 4px solid $buttons_link_color_hover;
+      @include def-link-colors($buttons_link_color_hover, $buttons_link_color_hover, $buttons_link_color_hover, $buttons_link_color_hover, $buttons_link_color_hover);
+    }
+    &:hover{
+      @include def-v-gradient($fromColor:#ededed, $toColor:#ffffff);
+      border-left: 4px solid $buttons_link_color_hover;
+    }
+  }
+}

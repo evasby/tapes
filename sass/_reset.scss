@@ -1,0 +1,12 @@
+$reset-font-color: #ed272b;
+$reset-font-size: 11px;
+.reset{
+  text-align: right;
+  padding: 0px 10px 8px 0px;
+  &_button{
+    @include def-link-colors($reset-font-color, $reset-font-color, $reset-font-color, $reset-font-color, $reset-font-color);
+    font-size: $reset-font-size;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,21 @@
+.logo{
+  width: 16%;
+  float: left;
+  display: block;
+  height: 87px;
+  background-image: url(../image/logo.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  @include def-respond(tablets-mobile){
+    width: 50%;
+    margin: 0 auto;
+    background-position: 50% center;
+  }
+  @include def-respond(mobile){
+    clear: both;
+    width: 100%;
+    background-position: 0px center;
+  }
+}

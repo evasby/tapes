@@ -1,0 +1,97 @@
+$font_hover_color_a: #005b9a;
+.phone{
+  padding: 15px 0 0 0;
+  position: relative;
+  width: 23%;
+  float: left;
+  &_number{
+    color: $grey;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 30px 9px 25px;
+    margin: 0px;
+    &:before{
+      background: url("../image/icons-top.png") 0px 0px no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 19px;
+      position: absolute;
+      left: 0;
+      top: 15px;         
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="before"
+      );
+      .before{
+        background: url("../image/icons-top.png") 0px 0px no-repeat #fff;
+        width: 12px;
+        height: 19px;         
+        position: absolute;
+        left: 0;
+        top: 12px;    
+      }
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0px;
+  }
+  &_email{
+    color: $grey;
+    font-size: 14px;
+    margin: 0 0 0 29px;
+    border-bottom: 1px solid #d9d9d9;
+    &:hover{
+      color: $font_hover_color_a;
+      border-bottom: 1px dashed #b6cee6;
+    }
+    &:before{
+      background: url("../image/icons-top.png") -12px -3px no-repeat #fff;
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 13px;   
+      position: absolute;
+      top: 69px;
+      left: 0;      
+    }
+    @include old-ie{
+      *zoom: expression(
+        this.runtimeStyle.zoom="1",
+        this.appendChild( document.createElement("small") ).className="before"
+      );
+      .before{
+        background: url("../image/icons-top.png") -12px -3px no-repeat #fff;
+        width: 17px;
+        height: 13px;
+        position: absolute;
+        top: 69px;
+        left: 0;
+      }
+    }
+  }
+  @include def-respond(tablets-mobile){
+    clear:both;
+    width: 50%;
+    &_number{
+      margin-left: 30%;
+      &:before {
+        margin-left: 30%;
+      }
+    }
+    &_email{
+      margin-left: 40%;
+      &:before {
+        margin-left: 30%;
+      }
+    }
+  }
+  @include def-respond(mobile){
+    clear: both;
+    width: auto;
+  }
+}

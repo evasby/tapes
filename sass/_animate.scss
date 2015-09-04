@@ -1,0 +1,46 @@
+.animate{
+  img{
+    width: 100%;
+    height: auto;
+  }
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 303px;
+  height: 303px;
+  &_item{
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    &__1{
+      top: 0px;
+      left: 0px;
+      @include def-opacity(56);
+    }
+    &__2{
+      top: 0px;
+      left: 101px;
+      @include def-opacity(90);
+    }
+    &__3{
+      top: 0px;
+      left: 203px;
+      @include def-opacity(59);
+    }
+    &__4{
+      top: 101px;
+      left: 101px;
+      @include def-opacity(20);
+    }
+    &__5{
+      top: 101px;
+      left: 203px;
+      @include def-opacity(74);
+    }
+    &__6{
+      top: 203px;
+      left: 203px;
+      @include def-opacity(13);
+    }
+  }
+}
